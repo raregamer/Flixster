@@ -27,5 +27,5 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ### Notes
 Describe any challenges encountered while building the app.
-1. Constraints where giving me a little trouble. 
+1. Constraints were giving me a little trouble. 
 2. Parsing with optionals was throwing me off a little.    
