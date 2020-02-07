@@ -79,5 +79,20 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           // Get the new view controller using segue.destination.
+           // Pass the selected object to the new view controller.
+           print("Loading Details Screen")
+           
+           //Find the selected movie
+           let cell = sender as! UICollectionViewCell // the sender is the cell that was pressed by user
+           let indexPath = collectionView.indexPath(for: cell)!
+           let movie = movies[indexPath.row]
+           
+           //pass the selected movie to the details
+           let detailsViewController = segue.destination as! MovieDetailsViewController
+           detailsViewController.movie = movie
+       }
 
 }
