@@ -53,5 +53,17 @@ class MovieDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        print("Loading trailer modal Screen")
+        
+        //get the selected movie id
+        let movieVideoID = movie["id"] 
+        //pass the selected movie to the details
+        let modalViewController = segue.destination as! ModalViewController
+        modalViewController.movieID = movieVideoID as? Int 
+    }
 
 }
