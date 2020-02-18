@@ -35,6 +35,8 @@ class MoviesViewController: UIViewController,UITableViewDataSource, UITableViewD
        } else if let data = data {
           let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
         self.movies = dataDictionary["results"] as! [[String:Any]]
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 50
         self.tableView.reloadData()
         
           // TODO: Get the array of movies
